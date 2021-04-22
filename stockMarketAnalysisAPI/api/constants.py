@@ -2,6 +2,9 @@ from enum import Enum
 
 API_BASE_URL = "https://www.alphavantage.co/query"
 API_KEY = "75GZO8O8MZB9PBJM"
+DATA_FILTER_DAYS = 60
+PAST_MAX_LOW_DAYS = 10
+
 
 
 class OutputSize(Enum):
@@ -20,6 +23,7 @@ class Exchange(Enum):
     TRT = 'Toronto Stock Exchange'
     TRV = 'Toronto Venture Exchange'
     LON = 'London Stock Exchange'
+    US = 'United States'
     DEX = 'XETRA'
     BSE = 'BSE'
     SHH = 'Shanghai Stock Exchange'
