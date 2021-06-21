@@ -2,7 +2,7 @@ from enum import Enum
 
 API_BASE_URL = "https://www.alphavantage.co/query"
 API_KEY = "75GZO8O8MZB9PBJM"
-DATA_FILTER_DAYS = 60
+DATA_FILTER_DAYS = 100
 PAST_MAX_LOW_DAYS = 10
 
 

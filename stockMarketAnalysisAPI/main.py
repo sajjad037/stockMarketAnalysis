@@ -43,6 +43,7 @@ def call_stock_api(exchange: Exchange, symbol: str, function: APIFunction, outpu
                     break
 
             # Sort time_series_list by low value
+            print(f"-------------------------------------------------------")
             high_time_series_list = sorted(filtered_time_series_list, key=lambda x: x.high, reverse=True)
             for count, item in enumerate(high_time_series_list, start=1):
                 print(f"count={count}, Date={item.date}, high={item.high}")
@@ -82,4 +83,4 @@ def parse_time_series_data(date_key: str, time_series_data: dict):
 
 
 if __name__ == '__main__':
-    call_stock_api(Exchange.US, "ENG", APIFunction.TIME_SERIES_DAILY_ADJUSTED, OutputSize.compact)
+    call_stock_api(Exchange.US, "NIO", APIFunction.TIME_SERIES_DAILY_ADJUSTED, OutputSize.compact)
